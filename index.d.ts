@@ -135,7 +135,7 @@ declare module "carlo" {
          * @param carloFunction Callback function which will be called in Carlo's context.
          * @returns the result of `carloFunction`
          */
-        public exposeFunction<R extends Serializable | void>(name:string, carloFunction:(...args:Serializable[]) => R | Promise<R>):Promise<void>
+        public exposeFunction(name:string, carloFunction:(...args:Serializable[]) => Promise<any> | any):Promise<void>
         /**
          * Shortcut to the main window's [Window.load(uri[, ...params])](https://github.com/GoogleChromeLabs/carlo/blob/master/API.md#windowloaduri-params).
          */
